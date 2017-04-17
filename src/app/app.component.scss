@@ -1,0 +1,56 @@
+@import './shared/colors.scss';
+
+.base {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: $background;
+    color: $text;
+
+    .header {
+        height: 100px;
+        padding: 20px;
+        background-color: $lowerlight;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+
+        .aside-left {
+            order: -1;
+            padding: 20px;
+            background-color: $lowlight;
+        }
+
+        .aside-right {
+            padding: 20px;
+            background-color: $lowlight;
+        }
+
+        .content {
+            padding: 20px;
+        }
+    }    
+
+    @media (min-width: 768px) {
+        .body {
+            flex-direction: row;
+            flex: 1;
+            
+            .content {
+                flex: 1;
+            }
+
+            .aside-left, .aside-right {
+                flex: 0 0 200px;
+            }
+        }
+    }
+
+    .footer {
+        height: 50px;
+        padding: 20px;
+        background-color: $lowerlight;
+    }
+}

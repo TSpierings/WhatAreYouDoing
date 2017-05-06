@@ -9,8 +9,11 @@ header {
     color: $text-dark;
     animation: fadein 1s;   
 
-    nav {
-        
+    h1 {
+        font-size: 8vw;
+    }
+
+    nav {        
         a {
             color: $text-dark;
 
@@ -23,6 +26,10 @@ header {
     @media (min-width: 550px) {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;        
+        align-items: center;      
+
+        h1 {
+            font-size: 2em;
+        }  
     }
 }

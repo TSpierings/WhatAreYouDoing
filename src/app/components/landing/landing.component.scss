@@ -6,14 +6,15 @@
     justify-content: center;
     height: calc(100vh - 100px);
     background-color: $background;
-    min-width: 400px;
 
     .content-box {
         display: flex;
         flex-direction: column;
+        align-items: center;
         
         h1 {
             color: $text-dark;
+            font-size: 8vw;
         }
 
         .buttons {
@@ -40,6 +41,12 @@
                     transition: 0ms;
                     transform: translate(0, 1px);
                 }
+            }
+        }
+
+        @media (min-width: 550px) {
+            h1 {
+                font-size: 2em
             }
         }
     }

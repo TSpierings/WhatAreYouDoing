@@ -1,11 +1,11 @@
-@import './shared/colors.scss';
+@import '../shared/colors.scss';
 
 .base {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     background: $background;
-    color: $text;
+    color: $text-dark;
 
     .header {
         height: 100px;

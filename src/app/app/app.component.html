@@ -1,4 +1,8 @@
-<div class="base">
+<app-header *ngIf="_authService.showHeader"></app-header>
+<router-outlet></router-outlet>
+
+
+<!--<div class="base">
   <div class="header">
     header
   </div>
@@ -26,4 +30,4 @@ Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur fermentu
   <div class="footer">
     footer
   </div>
-</div>
+</div>-->

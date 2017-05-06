@@ -1,6 +1,8 @@
 <main>
   <div class="activity-boxes">
     <app-activity *ngFor="let activity of activities" 
-      [activity]="activity"></app-activity>
+      [activity]="activity"
+      (toggleActive)="onToggleActive($event)"></app-activity>
+    <app-add-activity (confirmNewActivity)="addNew($event)"></app-add-activity>
   </div>
 </main>

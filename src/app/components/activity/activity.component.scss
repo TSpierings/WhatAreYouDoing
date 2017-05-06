@@ -7,6 +7,11 @@
     margin: 5px;
     padding: 10px;
     background-color: $lowlight;
+    color: $text-dark;
+
+    label {
+        word-wrap: break-word;
+    }
 
     &:hover {
         background-color: $highlight;

@@ -22,4 +22,14 @@ export class TrackerComponent implements OnInit {
   ngOnInit() {
   }
 
+  onToggleActive(activity: Activity) {
+    this.activities.filter(x => x != activity).map(x => {
+      x.active = false;
+    });
+  }
+
+  addNew(activity: Activity) {
+    console.log(JSON.stringify(activity));
+    this.activities.push(activity);
+  }
 }

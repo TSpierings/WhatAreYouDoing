@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Activity } from '../../interfaces/activity';
 
 @Component({
@@ -9,6 +9,7 @@ import { Activity } from '../../interfaces/activity';
 export class ActivityComponent implements OnInit {
 
   @Input() activity: Activity;
+  @Output() toggleActive = new EventEmitter();
 
   private isActive: boolean = false;
 
@@ -19,5 +20,6 @@ export class ActivityComponent implements OnInit {
 
   onClick() {
     this.activity.active = !this.activity.active;
+    this.toggleActive.emit(this.activity);
   }
 }

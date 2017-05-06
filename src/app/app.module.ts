@@ -10,6 +10,7 @@ import { TrackerComponent } from './components/tracker/tracker.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AuthService } from './services/auth/auth.service';
 import { ActivityComponent } from './components/activity/activity.component';
+import { AddActivityComponent } from './components/add-activity/add-activity.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full'},
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     LandingComponent,
     TrackerComponent,
     HeaderComponent,
-    ActivityComponent
+    ActivityComponent,
+    AddActivityComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

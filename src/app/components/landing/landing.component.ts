@@ -12,10 +12,13 @@ export class LandingComponent implements OnInit {
   constructor(private _authService: AuthService, private _router: Router) { }
 
   ngOnInit() {
+    if(this._authService.loggedIn) {
+      this._router.navigate(['tracker']);
+    }    
   }
 
   onEnter() {
     this._router.navigate(['tracker']);
-    this._authService.showHeader = true;    
+    this._authService.loggedIn = true;    
   }
 }

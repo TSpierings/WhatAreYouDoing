@@ -8,14 +8,26 @@ header {
     border-bottom: 1px solid $highlight;
     color: $text-dark;
     animation: fadein 1s;   
+    // align-items: center;
 
     h1 {
         font-size: 8vw;
     }
 
     nav {        
+        margin-top: 10px;
+
         a {
+            display: inline-block;
             color: $text-dark;
+            border-right: 1px solid $highlight;
+            // width: 25vw;
+            padding-right: 5px;
+            text-align: center;
+
+            &:last-child {
+                border: 0;
+            }
 
             &:hover {
                 color: $highlight;
@@ -30,6 +42,6 @@ header {
 
         h1 {
             font-size: 2em;
-        }  
+        }
     }
 }

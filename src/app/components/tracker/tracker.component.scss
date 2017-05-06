@@ -1,0 +1,36 @@
+@import '../../shared/colors.scss';
+@import '../../shared/marching-ants.scss';
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    margin-top: 10px;
+    width: 100%;
+    color: $text-dark;
+
+    .activity-boxes {
+        display: flex;
+        flex-wrap: wrap;
+
+        .activity {
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            padding: 10px;
+            background-color: $lowlight;
+
+            &:hover {
+                background-color: $highlight;
+                color: $text-light;
+            }
+        }
+
+        .active {
+            @include marching-ants-v2-init(20px, 2px, 2s, 1);
+            @include marching-ants-v2-color($highlight, $lowlight);
+            animation-play-state: running;
+        }
+    }
+}

@@ -1,8 +1,18 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { CanActivate, Router }    from '@angular/router';
 
 @Injectable()
-export class AuthService {
-  loggedIn: boolean;
+export class AuthService implements CanActivate {
+  loggedIn: boolean = false;
 
-  constructor() { }
+  constructor(private _router: Router) { }
+
+  canActivate() {
+    if (this.loggedIn) {
+      return true;
+    }
+    else {
+      this._router.navigate(['landing']);
+    }
+  }
 }

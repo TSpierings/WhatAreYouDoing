@@ -13,7 +13,7 @@ import { AuthService } from './services/auth/auth.service';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full'},
   { path: 'landing', component: LandingComponent },
-  { path: 'tracker', component: TrackerComponent },
+  { path: 'tracker', component: TrackerComponent, canActivate: [AuthService] },
 ];
 
 @NgModule({

@@ -1,33 +1,4 @@
-<app-header *ngIf="_authService.loggedIn"></app-header>
-<router-outlet></router-outlet>
-
-
-<!--<div class="base">
-  <div class="header">
-    header
-  </div>
-  <div class="body">
-    <div class="aside-left">
-      lefty
-    </div>
-    <div class="content">
-      
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus nibh quis porta vehicula. Pellentesque non dolor sapien. Donec vestibulum massa ac mi faucibus venenatis. Nullam et odio at sem tincidunt facilisis sed vitae ante. Vivamus eu ex mi. Praesent ornare vulputate lacus, nec tincidunt dolor ultrices non. Etiam a pharetra lacus. Maecenas sodales est eu orci auctor, accumsan consequat risus tristique. In commodo vestibulum dolor, a feugiat lorem porta id. Praesent ullamcorper posuere velit, ut sagittis est. Donec porta vitae libero at convallis. Aliquam et mollis diam. Sed aliquet dolor nec tristique ultricies.
-
-Fusce neque sem, molestie eu ultrices vitae, posuere dictum nulla. Aliquam at cursus ante. Aliquam vehicula, nisl dapibus sodales ornare, leo elit elementum mauris, ac efficitur turpis nisi id enim. Maecenas tempor libero orci, ac convallis purus interdum in. Nunc vehicula id ex quis blandit. Ut cursus semper ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu finibus est, vehicula sodales ex. Duis suscipit metus vitae ipsum rhoncus, at posuere sem consectetur. Integer vel hendrerit mi, sit amet pretium turpis.
-
-Aliquam erat volutpat. Suspendisse sit amet rutrum sem. Maecenas laoreet dolor eu nulla aliquam ullamcorper. Pellentesque vitae ipsum sit amet nunc bibendum dictum. Duis nec auctor enim, id facilisis quam. Proin ornare id sapien a bibendum. Quisque in fringilla dui. Mauris dapibus dignissim dignissim. Cras urna neque, scelerisque sit amet lectus et, tristique vulputate libero. Curabitur vestibulum nibh id massa feugiat sodales. Sed aliquet augue non urna fermentum pellentesque.
-
-Morbi placerat fringilla sapien aliquam laoreet. Nulla non ullamcorper elit, lacinia eleifend felis. Ut libero lacus, egestas non laoreet vel, iaculis at augue. In vel nisl malesuada tellus feugiat pellentesque semper non enim. Aenean consequat sollicitudin magna non egestas. Praesent pulvinar imperdiet ex non scelerisque. Donec ultrices egestas ante sit amet consequat. Morbi quis porttitor augue.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur fermentum eget dolor non feugiat. Aenean dapibus leo non gravida varius. Etiam ac velit dolor. In mi tellus, maximus vitae leo at, tristique posuere odio. Curabitur sem est, vehicula quis leo vitae, varius sollicitudin risus. Sed molestie nulla quis turpis blandit maximus. 
-    </div>
-    <div class="aside-right">
-      righty
-    </div>
-  </div>
-  <div class="footer">
-    footer
-  </div>
-</div>-->
+<div class="container">
+  <app-header class="header" *ngIf="_authService.loggedIn"></app-header>
+  <router-outlet></router-outlet>
+</div>

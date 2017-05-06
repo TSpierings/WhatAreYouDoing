@@ -1,31 +1,6 @@
 <main>
   <div class="activity-boxes">
-    <div class="activity active">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
-    <div class="activity">
-      <label>Activity</label>
-    </div>
+    <app-activity *ngFor="let activity of activities" 
+      [activity]="activity"></app-activity>
   </div>
 </main>

@@ -1,0 +1,27 @@
+@import '../../shared/colors.scss';
+@import '../../shared/marching-ants.scss';
+
+.activity {
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    padding: 10px;
+    background-color: $lowlight;
+
+    &:hover {
+        background-color: $highlight;
+        color: $text-light;
+    }
+}
+
+.active {
+    @include marching-ants-v2-init(20px, 2px, 2s, 1);
+    @include marching-ants-v2-color($highlight, $lowlight);
+    animation-play-state: running;
+}
+
+@media (min-width: 550px) {
+    .activity {
+        margin: 20px;
+    }
+}

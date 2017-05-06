@@ -1,5 +1,5 @@
 @mixin marching-ants-v2-init($ant-size,$ant-width,$speed,$id){
-    padding: 5px + $ant-width;
+    padding: 8px + $ant-width;
     background-size: 
       $ant-size $ant-width, 
       $ant-size $ant-width, 

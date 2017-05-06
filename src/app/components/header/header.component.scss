@@ -1,8 +1,9 @@
 @import '../../shared/colors.scss';
+@import '../../shared/animations.scss';
 
 header {
     display: flex;
-    height: 50px;
+    min-height: 50px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $highlight;
@@ -19,9 +20,4 @@ header {
             }
         }
     }
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
 }

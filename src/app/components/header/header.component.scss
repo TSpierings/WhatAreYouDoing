@@ -3,12 +3,11 @@
 
 header {
     display: flex;
-    min-height: 50px;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    min-height: 80px;
     border-bottom: 1px solid $highlight;
     color: $text-dark;
-    animation: fadein 1s;    
+    animation: fadein 1s;   
 
     nav {
         
@@ -19,5 +18,11 @@ header {
                 color: $highlight;
             }
         }
+    }
+
+    @media (min-width: 550px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;        
     }
 }

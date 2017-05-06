@@ -4,9 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 100px);
     background-color: $background;
+    min-width: 400px;
 
     .content-box {
         display: flex;

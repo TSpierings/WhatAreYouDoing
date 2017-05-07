@@ -1,10 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, trigger, state, transition, animate, style, keyframes } from '@angular/core';
 import { Activity } from '../../interfaces/activity';
 
 @Component({
   selector: 'app-tracker',
   templateUrl: './tracker.component.html',
-  styleUrls: ['./tracker.component.scss']
+  styleUrls: ['./tracker.component.scss'],
+  animations: [        
+        trigger('activityState', [
+            transition(':enter', [
+              animate(500, keyframes([
+                style({width: '0', opacity: '0'}),
+                style({width: '*', opacity: '0'}),
+                style({width: '*', opacity: '1'}),
+              ]))
+            ]),
+            transition(':leave', [
+              animate(500, keyframes([
+                style({width: '*', opacity: '1'}),
+                style({width: '*', opacity: '0'}),
+                style({width: '0', opacity: '0'}),
+              ]))
+            ])            
+        ])
+    ]
 })
 export class TrackerComponent implements OnInit {
 
@@ -32,7 +50,6 @@ export class TrackerComponent implements OnInit {
   }
 
   addNew(activity: Activity) {
-    console.log(JSON.stringify(activity));
     this.activities.push(activity);
   }
 

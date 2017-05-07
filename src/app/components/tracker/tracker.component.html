@@ -1,6 +1,6 @@
 <main>
   <div class="activity-boxes">
-    <app-activity *ngFor="let activity of activities" 
+    <app-activity *ngFor="let activity of activities" [@activityState]="active"
       [activity]="activity"
       (toggleActive)="onToggleActive($event)"
       (deleteActivity)="onDeleteActivity($event)"></app-activity>

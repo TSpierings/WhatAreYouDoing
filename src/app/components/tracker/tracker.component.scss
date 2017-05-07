@@ -1,5 +1,6 @@
 @import '../../shared/colors.scss';
 @import '../../shared/marching-ants.scss';
+@import '../../shared/animations.scss';
 
 main {
     display: flex;
@@ -9,7 +10,7 @@ main {
     margin-top: 10px;
     width: 100%;
     color: $text-dark;
-    animation: fadein 1s;   
+    animation: fadein 1s;
 
     .activity-boxes {
         display: flex;

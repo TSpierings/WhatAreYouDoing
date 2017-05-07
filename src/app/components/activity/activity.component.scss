@@ -13,9 +13,11 @@
         word-wrap: break-word;
     }
 
-    &:hover {
-        background-color: $highlight;
-        color: $text-light;
+    @media (hover: hover) {
+        &:hover {
+            background-color: $highlight;
+            color: $text-light;
+        }
     }
 }
 

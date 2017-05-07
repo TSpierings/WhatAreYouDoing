@@ -2,7 +2,11 @@
   <div class="activity-boxes">
     <app-activity *ngFor="let activity of activities" 
       [activity]="activity"
-      (toggleActive)="onToggleActive($event)"></app-activity>
+      (toggleActive)="onToggleActive($event)"
+      (deleteActivity)="onDeleteActivity($event)"></app-activity>
     <app-add-activity (confirmNewActivity)="addNew($event)"></app-add-activity>
   </div>
 </main>
+<app-confirmation-dialog *ngIf="confirmDelete" 
+  [text]="'Delete activity?'"
+  (result)="confirmationResult($event)"></app-confirmation-dialog>

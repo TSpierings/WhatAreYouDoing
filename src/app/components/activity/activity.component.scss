@@ -9,14 +9,31 @@
     background-color: $lowlight;
     color: $text-dark;
 
-    label {
+    .name {
         word-wrap: break-word;
+    }
+
+    .delete {
+        visibility: hidden;
+        display: block;
+        margin: 45px 0 0 40px;
+        font-size: 10px;
+        color: $lowerlight;
+        cursor: pointer;
+
+        &:hover {
+            color: $highlight;
+        }
     }
 
     @media (hover: hover) {
         &:hover {
             background-color: $highlight;
             color: $text-light;
+
+            .delete {
+                color: $text-light;
+            }
         }
     }
 }
@@ -25,6 +42,10 @@
     @include marching-ants-v2-init(20px, 2px, 2s, 1);
     @include marching-ants-v2-color($highlight, $lowlight);
     animation-play-state: running;
+
+    .delete {
+        visibility: visible;
+    }
 }
 
 @media (min-width: 550px) {

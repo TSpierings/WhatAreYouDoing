@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AuthService } from './services/auth/auth.service';
 import { ActivityComponent } from './components/activity/activity.component';
 import { AddActivityComponent } from './components/add-activity/add-activity.component';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full'},
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     TrackerComponent,
     HeaderComponent,
     ActivityComponent,
-    AddActivityComponent
+    AddActivityComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

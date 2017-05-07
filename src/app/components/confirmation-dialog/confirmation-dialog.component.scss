@@ -1,0 +1,62 @@
+@import '../../shared/colors.scss';
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-dark;
+
+    .blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.25;
+    }
+
+    .dialog {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;    
+        background-color: $background;
+        padding: 20px;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+
+            button {
+                height: 30px;
+                width: 50px;
+                margin:  10px 20px 0px 20px;
+                border: 1px solid $highlight;
+                background-color: $highlight;
+                color: $text-light;
+                transition: 250ms;
+                outline: none;
+
+                &:hover {
+                    color: $text-dark;
+                    background-color: $background;
+                }
+
+                &:active {
+                    transition: 0ms;
+                    transform: translate(0, 1px);
+                }
+            }
+        }
+    }
+}

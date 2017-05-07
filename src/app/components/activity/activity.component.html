@@ -1,5 +1,6 @@
 <div class="activity"
   (click)="onClick()"
   [ngClass]="{'active': activity.active}">
-  <label>{{activity.name}}</label>
+  <label class="name">{{activity.name}}</label>
+  <div class="delete" (click)="onDelete()">Delete</div>
 </div>

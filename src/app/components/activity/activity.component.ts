@@ -10,6 +10,7 @@ export class ActivityComponent implements OnInit {
 
   @Input() activity: Activity;
   @Output() toggleActive = new EventEmitter();
+  @Output() deleteActivity = new EventEmitter();
 
   private isActive: boolean = false;
 
@@ -21,5 +22,9 @@ export class ActivityComponent implements OnInit {
   onClick() {
     this.activity.active = !this.activity.active;
     this.toggleActive.emit(this.activity);
+  }
+
+  onDelete() {
+    this.deleteActivity.emit(this.activity);
   }
 }

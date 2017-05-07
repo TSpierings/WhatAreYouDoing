@@ -8,6 +8,9 @@ import { Activity } from '../../interfaces/activity';
 })
 export class TrackerComponent implements OnInit {
 
+  private confirmDelete: boolean = false;
+  private activityToBeDeleted: Activity;
+
   activities: Array<Activity> = ([
     {name: 'dev', active: false},
     {name: 'fe', active: false},
@@ -31,5 +34,18 @@ export class TrackerComponent implements OnInit {
   addNew(activity: Activity) {
     console.log(JSON.stringify(activity));
     this.activities.push(activity);
+  }
+
+  onDeleteActivity(activity: Activity) {
+    this.activityToBeDeleted = activity;
+    this.confirmDelete = true;
+  }
+
+  confirmationResult(result: boolean) {
+    if(result) {
+      this.activities = this.activities.filter(x => x != this.activityToBeDeleted);
+    }
+
+    this.confirmDelete = false;
   }
 }

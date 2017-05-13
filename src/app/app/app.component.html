@@ -1,4 +1,4 @@
 <div class="container">
-  <app-header *ngIf="_authService.loggedIn"></app-header>
+  <app-header *ngIf="_authService.authenticated()"></app-header>
   <router-outlet></router-outlet>
 </div>

@@ -4,8 +4,8 @@
   <div class="content-box">
     <h1>What are you doing?</h1>
     <div class="buttons">
-      <button (click)="onEnter()">Enter</button>
-      <button>Sign up</button>
+      <button (click)="_authService.login()">Enter</button>
+      <button (click)="_authService.logout()">Sign up</button>
     </div>
   </div>
 </div>

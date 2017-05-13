@@ -1,4 +1,4 @@
-import { Component, OnInit, trigger, state, transition, animate, style } from '@angular/core';
+import { Component, OnInit, AfterViewInit, trigger, state, transition, animate, style } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
 
@@ -15,23 +15,19 @@ import { Router } from '@angular/router';
         ])
     ]
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit{
   private state: string = 'active';
 
   constructor(private _authService: AuthService, private _router: Router) { }
 
   ngOnInit() {
-    if(this._authService.loggedIn) {
-      this._router.navigate(['tracker']);
-    }    
-  }
-
-  onEnter() {    
-    this.state = 'inactive';
+    if (this._authService.authenticated()) {
+      this._router.navigate(['/tracker']);
+    }
   }
 
   animationDone(animEvent: any) {
-    if(animEvent.toState === 'inactive') {
+    if (animEvent.toState === 'inactive') {
       this._authService.loggedIn = true;    
       this._router.navigate(['tracker']);
     }    

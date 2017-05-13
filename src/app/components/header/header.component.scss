@@ -21,9 +21,9 @@ header {
             display: inline-block;
             color: $text-dark;
             border-right: 1px solid $highlight;
-            // width: 25vw;
             padding-right: 5px;
             text-align: center;
+            cursor: pointer;
 
             &:last-child {
                 border: 0;

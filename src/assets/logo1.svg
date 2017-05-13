@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="26.458mm" height="26.458mm" version="1.1" viewBox="0 0 26.458335 26.458334" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(2.1458e-6 -270.54)">
-  <g fill="#d00">
-   <rect x="-2.1458e-6" y="270.54" width="5.2917" height="26.458"/>
-   <rect x="10.583" y="270.54" width="5.2917" height="26.458"/>
-   <rect x="21.167" y="270.54" width="5.2917" height="26.458"/>
-   <rect x="5.2917" y="291.71" width="5.2917" height="5.2917"/>
-   <rect x="15.875" y="291.71" width="5.2917" height="5.2917"/>
-  </g>
- </g>
+<svg width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#DD0000" d="M0 0 L20 0 L20 80 L40 80 L40 0 L60 0 L60 80 L80 80 L80 0 L100 0 L100 100 L0 100 Z" />
 </svg>

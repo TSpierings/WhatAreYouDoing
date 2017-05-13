@@ -3,45 +3,63 @@
 
 header {
     display: flex;
-    flex-direction: column;
-    min-height: 80px;
+    padding-bottom: 10px;
     border-bottom: 1px solid $highlight;
     color: $text-dark;
-    animation: fadein 1s;   
-    // align-items: center;
+    animation: fadein 1s;
+    height: 60px;
+    justify-content: space-between;
 
-    h1 {
-        font-size: 8vw;
+    img {
+        width: 50px;
+        height: 50px;
     }
 
-    nav {        
-        margin-top: 10px;
+    .textcontainer {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 50px;
 
-        a {
-            display: inline-block;
-            color: $text-dark;
-            border-right: 1px solid $highlight;
-            padding-right: 5px;
-            text-align: center;
-            cursor: pointer;
+        h1 {
+            font-size: 6vw;
+        }
 
-            &:last-child {
-                border: 0;
-            }
+        nav {
+            a {
+                display: inline-block;
+                color: $text-dark;
+                border-right: 1px solid $highlight;
+                padding-right: 5px;
+                text-align: center;
+                cursor: pointer;
 
-            &:hover {
-                color: $highlight;
+                &:last-child {
+                    border: 0;
+                }
+
+                &:hover {
+                    color: $highlight;
+                }
             }
         }
     }
 
     @media (min-width: 550px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;      
+        justify-content: flex-start;
 
-        h1 {
-            font-size: 2em;
+        .textcontainer {
+            margin-left: 40px;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-size: 40px;
+            }
         }
     }
 }

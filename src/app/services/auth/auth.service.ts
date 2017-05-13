@@ -8,7 +8,16 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService implements CanActivate {
   
-  lock = new Auth0Lock('nTCwryEixwWy1W3kQJ1YD3qHjjK3zHmL', 'tchakaspierings.eu.auth0.com', {});
+  lock = new Auth0Lock('nTCwryEixwWy1W3kQJ1YD3qHjjK3zHmL', 'tchakaspierings.eu.auth0.com', 
+    {
+      languageDictionary: {
+        title: 'Get in here'
+      },
+      theme: {
+        primaryColor: '#D00',
+        logo: '../../assets/logo1.svg'
+      }
+    });
   loggedIn: boolean = false;
 
   constructor(public _router: Router) {
